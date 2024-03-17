@@ -16,6 +16,7 @@ import Mainpage from "./mainpage";
 import Dob from "./dob"
 import Fullname from "./Fullname"
 import Selectgender from './Selectgender';
+import Yourinterest from './yourinterests'
 
 const router = createBrowserRouter([
   {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/selectgender",
     element: <Selectgender/>,
+  },
+  {
+    path: "/yourinterests",
+    element: <Yourinterest/>,
   },
 
 ]);

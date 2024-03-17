@@ -14,10 +14,10 @@
 .dob-container{
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 100px auto;
     margin-top: 100px;
     background: #fff;
-    padding: 30px 50px ;
+    padding: 30px 20px ;
     border-radius: 9px;
  }
 
@@ -47,7 +47,7 @@
 
 .para{
     color: #555454;
-    font-size: 15px;
+    font-size: 13px;
     font-family: "Asap Condensed", sans-serif;
     font-weight: lighter;
     margin-top: 5px;
@@ -58,19 +58,19 @@
     height: 2px;
     background: orangered;
     border-radius: 9px;
-    margin-left: 25px;
+    margin-left: 10px;
 }
 
 #Dob{
     margin: 30px 40px;
-    width: 200px;
-    height: 30px;
+    width: 150px;
+    height: 20px;
     border: solid rgb(75, 73, 73) 2px;
     background-color: transparent;
     font-size: larger;
     border-radius: 30px;
     padding:  10px 30px;
-    color: #555454;
+    color: #2c2b2b;
 }
 
 .dob-submit{
@@ -80,6 +80,18 @@
 }
 
 .Next{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 40px;
+    color: #fff;
+    background-color: orangered;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: "Asap Condensed", sans-serif; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,9 +104,11 @@
     font-weight: 500;
     cursor: pointer;
     font-family: "Asap Condensed", sans-serif;
+    transition: 0.3s;
+    margin-right: 0px;
 }
 
-.gray{
+.grayy{
     display: flex;
     justify-content: center;
     align-items: center;

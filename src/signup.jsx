@@ -9,7 +9,8 @@ import { createUserWithEmailAndPassword,
          signInWithEmailAndPassword
     } from "firebase/auth";
 
-import { Link } from 'react-router-dom';    
+import { Link, useNavigate} from 'react-router-dom';
+
  
 // import {useDispatch} from 'react-redux'; 
 // import {setUser} from './usersSlice.js';
@@ -19,6 +20,7 @@ import { Link } from 'react-router-dom';
 
 const Signup = () => {
     // const dispatch = useDispatch();
+    const navigate= useNavigate();
     const [action, setAction] = useState("Sign Up");
     console.log(auth);
     const [userCredentials, setuserCredentials] = useState({});
@@ -35,6 +37,7 @@ const Signup = () => {
         .then((userCredential) => {
                 // Signed up 
                 console.log(userCredential.user);
+                navigate("/fullname")
     
                 // dispatch(setUser({id: userCredential.user.uid, email: userCredential.user.email}));
                 
@@ -55,6 +58,7 @@ const Signup = () => {
             // Signed in 
             const user = userCredentials.user;
             console.log(user)
+            navigate("/mainpage")
            
 
             // dispatch(setUser({id: userCredentials.user.uid,email:userCredentials.user.email}));
@@ -116,9 +120,7 @@ const Signup = () => {
                     <div className={action === "Sign Up" ? "submit gray" : "submit"} onClick={(e) => { setAction("Login"); { handleLogin(e) } }}>
                         Login
                     </div>
-                    <Link to="/dob">
-                        <button>Go</button>
-                    </Link>
+
                    
                 </div>
             </div>

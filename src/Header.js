@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 
 function Header() {
   return (
-    <div className='header'>
+    <div className='header-header'>
 
       <IconButton>
         <PermIdentityIcon className='header_icon' fontSize='large' />

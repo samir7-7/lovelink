@@ -1,8 +1,24 @@
 import React, { useState} from 'react';
 import "./dob.css"
-import { Link } from 'react-router-dom';  
+import { Link, useNavigate } from 'react-router-dom';
+import { textDB } from './firebase'
+import { addDoc, collection } from 'firebase/firestore';  
 function Dob() {
-    const [color, setColor] = useState("gray");
+    const navigate = useNavigate();
+    const [dob, setDob] = useState('');
+    const handleNext = async (e) => {
+    
+        // const names= e.target.value.length
+        if(dob.length>=5){
+          const valRef = collection(textDB, "txtData")
+          await addDoc(valRef, { txtVal:dob})
+          navigate("/dob")
+        }
+        else{
+          alert("Please enter your birth date.")
+        }
+  
+      }
   return (
     
         <div className="whole">
@@ -19,15 +35,12 @@ function Dob() {
                 </div>
                 </div>
 
-                <form action="">
-                    <input onChange={()=> setColor("Next")} type="date" name="dob" id="Dob" />
+                <form action="" className='dobb'>
+                    <input onChange={(e)=>setDob(e.target.value)} type="date" name="dob" id="Dob" placeholder='mm/dd/yyyy' />
                 </form>
 
                 <div className="dob-submit">
-                <div className={color}>Next</div>
-                <Link to="/fullname">
-                <button>Go</button>
-                </Link>
+                <div className="Next"onClick={handleNext}>Next</div>
                
                 </div>
 

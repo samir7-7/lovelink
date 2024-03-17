@@ -13,11 +13,13 @@
 .fullname-container{
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin: 20px;
     margin-top: 100px;
-    background: #fff;
-    padding: 30px 50px ;
+    background: #ffffff;
+    padding: 30px 20px ;
     border-radius: 9px;
+    align-items: center;
+    text-align: center;
  }
 
  .fullname-header{
@@ -54,12 +56,12 @@
 #fullname{
     
         height: 50px;
-        width: 400px;
+        width: 100px;
         background: transparent;
         border: none;
         outline: none;
-        Color: #797979;
-        font-size: 20px;
+        Color: #a5a4a4;
+        font-size: 15px;
         overflow: hidden;
     }
     
@@ -73,19 +75,21 @@
 }
 
 .fullname-inputs{
-    margin-top: 40px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center;
+    justify-content: center;
 }
 
 .fullname-input{
     display: flex;
     align-items: center;
-    margin: auto;
-    width: 300px;
-    height: 50px;
-    background: #eaeaea;
+    margin: 15px 10px;
+    width: 200px;
+    height: 40px;
+    background: #e4e3e3;
     border-radius: 30px;
 }
 
@@ -109,4 +113,10 @@
     font-weight: 500;
     cursor: pointer;
     font-family: "Asap Condensed", sans-serif;
+    transition: 0.3s;
+    margin-right: 130px;
+}
+
+.fullname-next:hover{
+    background-color: rgb(248, 127, 82);
 }
